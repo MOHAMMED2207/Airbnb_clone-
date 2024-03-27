@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+*/
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px];
+  }
+  .filter-btn {
+    @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+  }
+
+  .no-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .screen {
+    @apply sm:[1028px];
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fa5762;
+  border-radius: 100px;
+  border: white solid 1px ;
+}
