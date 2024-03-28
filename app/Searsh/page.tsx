@@ -42,8 +42,8 @@ const Searsh = async ({
       <Header placeholder={`${location} | ${range} | ${numOfGuests} Guests`} />
       <main>
         <section>
-          <div className="w-full flex">
-            <div className="w-full pt-14 pr-4 pl-20">
+        <div className="w-full flex flex-col lg:flex-row md:flex-col">
+        <div className="w-full pt-16 px-6 md:px-6  lg:pr-4  lg:pl-20">
               <p className="text-xs">
                 300+ Stays - {range} - for {numOfGuests} guests
               </p>
@@ -88,7 +88,7 @@ const Searsh = async ({
                 )}
               </div>
             </div>
-            <div className="hidden xl:inline-flex xl:min-w-[600px]">
+            <div className=" xl:inline-flex xl:min-w-[600px] h-96 w-full lg:w-full lg:h-screen md:h-96 ">
               <MapAppss searchResults={searshresult} />
             </div>
           </div>
