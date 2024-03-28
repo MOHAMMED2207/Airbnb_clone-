@@ -42,8 +42,8 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
         </button>
       </div>
       {showmodel || search ? (
-        <div className="absolute  w-full bg-black bg-opacity-50  h-screen top-[100%] left-[50%] flex flex-col   mx-auto translate-x-[-50%]">
-          <div className=" absolute top-0 mr-auto left-[50%]  translate-x-[-50%] ">
+        <div className="absolute  w-full bg-black bg-opacity-50  h-screen top-[100%]  left-[50%] flex flex-col   mx-auto translate-x-[-50%]">
+          <div className=" absolute top-0 mr-auto left-[60%]  translate-x-[-53%]  lg:translate-x-[-50%] lg:left-[50%]  ">
             <DateRangePicker
               // showSelectionPreview={true}
               onChange={HandelSeleact}
@@ -53,9 +53,10 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
               rangeColors={["#FD5B61"]}
               //  مينفعش احجز بتاريخ قبل اليوم الي انا فيه
               minDate={new Date()}
+              className="w-[10%] lg:w-full md:w-full"
             />
 
-            <div className="flex items-center border-b bg-white p-4">
+            <div className="flex items-center border-b bg-white p-4 w-[81.89%] lg:w-full md:w-full ">
               <h2 className="text-2xl flex-grow font-semibold">
                 Number of Guests
               </h2>
@@ -68,7 +69,7 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
                 onChange={(e) => setNumberGuest(Number(e.target.value))}
               />
             </div>
-            <div className="flex items-center bg-white p-5 gap-3">
+            <div className="flex items-center bg-white p-5 gap-3 w-[81.89%] lg:w-full md:w-full  ">
               <button
                 type="button"
                 onClick={() => {
