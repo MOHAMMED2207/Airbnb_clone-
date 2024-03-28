@@ -25,7 +25,7 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
 
   return (
     <>
-      <div className="flex w-full items-center md:border-2 rounded-full shadow-md border-opacity-25 border-black border-solid border-2 py-2 ">
+      <div className="flex w-full items-center my-3  md:border-2 rounded-full shadow-md border-opacity-25 border-black border-solid border-2 py-2 ">
         <input
           value={search}
           onChange={(e) => setSearsh(e.target.value)}
@@ -35,7 +35,7 @@ const Searchbar = ({ placeholder }: { placeholder?: string }) => {
         />
         <button onClick={() => setShowmodel(true)}>
           <SearchIcon
-            className={`hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2  ${
+            className={`mx-3 md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2  ${
               showmodel && "pl-20"
             } hover:transition-all`}
           />
