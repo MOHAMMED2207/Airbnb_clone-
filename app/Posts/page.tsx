@@ -71,8 +71,8 @@ const Post = async ({
 
       <main>
         <section>
-          <div className="w-full flex">
-            <div className="w-full pt-14 pr-4 pl-20">
+          <div className="w-full flex flex-col lg:flex-row md:flex-col">
+            <div className="w-full pt-16 px-6 md:px-6  lg:pr-4  lg:pl-20">
               {location && (
                 <>
                   <p className="text-xs">
@@ -94,7 +94,7 @@ const Post = async ({
                 {DataAfterFilter.map((result, inx) => (
                   <>
                     <div className="flex h-full w-full flex-col   hover:shadow-lg transition">
-                      <div className="relative h-80 w-full ">
+                      <div className=" relative h-80 w-full ">
                         <Image
                           src={result.img}
                           className="rounded-2xl object-cover brightness-90"
@@ -106,7 +106,7 @@ const Post = async ({
                         key={inx}
                         className="flex relative py-3 px-2 border-b cursor-pointer pr-4 rounded-md hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t"
                       >
-                        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
+                        <div className="relative hidden lg:flex md:flex h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
                           <Image
                             src={result.img}
                             fill
@@ -114,7 +114,7 @@ const Post = async ({
                             alt="Listing-Card"
                           />
                         </div>
-                        <div className="flex flex-col flex-grow pl-5">
+                        <div className="flex flex-col flex-grow lg:pl-5 md:pl-5 pl-0">
                           <div className="flex justify-between">
                             <p>{result.location}</p>
                             <HeartIcon className="h-7 cursor-pointer text-red-700" />
@@ -145,7 +145,7 @@ const Post = async ({
                 ))}
               </div>
             </div>
-            <div className="hidden xl:inline-flex xl:min-w-[600px] h-screen">
+            <div className=" xl:inline-flex xl:min-w-[600px]  h-96 lg:h-screen md:h-96">
               <MapAppss searchResults={searshresult} />
             </div>
           </div>
