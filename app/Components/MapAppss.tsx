@@ -40,7 +40,7 @@ const MapAppss = ({ searchResults }: { searchResults: SearshResulr }) => {
     <MapGL
       {...viewport}
       mapStyle="mapbox://styles/mapbox/navigation-night-v1"
-      mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY || ""}
+      mapboxAccessToken=" pk.eyJ1Ijoia2FyZWVtMjAwMnNoaW1lcyIsImEiOiJjbHIyNXRqdGgxMDd5MnB0M3NhcGU0dW00In0.AzOg6_5maKfFjnxNwExWhg"
       onMove={(nextViewport) =>
         setViewport((prev) => {
           return {
